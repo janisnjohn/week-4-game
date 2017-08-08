@@ -1,0 +1,77 @@
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background: url("../images/crystalbackground.jpg");
+}
+h1 {
+	background-color: orange;
+	color: white;
+	padding: 5px;
+	font-size: 36px;
+	width: 300px;
+	margin: 5px;
+	text-align: center;
+}
+h3 {
+	background-color: #0FF7FE;
+	padding: 5px;
+	font-size: 36px;
+	float: left;
+	width: 300px;
+	margin: 5px;
+}
+.Main-Text {
+	background-color: white;
+	width: 40%;
+	padding: 5px;
+	margin-left: 5px;
+}
+.record{
+	width:125px;
+	height:125px;
+	background-color: teal;
+	float:left;
+	margin: 5px;
+}
+.crystal-image {
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+
+}
+.crystal2-image {
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	float: left;
+}
+.crystal3-image {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 5px;
+}
+.crystal4-image {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 5px;
+}
+#number-to-guess{
+	width:175px;
+	height: 75px;
+	background-color: green;
+	padding-right: 100px;
+	padding-bottom: 50px;
+	margin: 5px;
+	float: left;
+	font-size: 40px;
+}
+.score-container{
+	width: 175px;
+	height: 125px;
+	background-color: #0FF7FE;
+	float: left;
+	margin: 5px;
+	padding: 10px;
+	font-size: 20px;
+}
