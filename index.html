@@ -3,16 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Chrystals Collector</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
 <body>
 	<div class="container">
-	<div class="Header">
+	<div class="row">
+	<div class="col-md-6 panel-default text-center">
 		<h1>CrystalsCollector!</h1>
 	</div>
-	<div class="Main-Text">
+	</div>
+	<div class="row">
+<!-- 	<div class="col-md-3"></div> -->
+	<div class="col-md-6 panel-default Main-Text">
 		<p>You will be given a random number at the start of the game.</p>.
 		<br>
 		<p>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</p>
@@ -24,26 +28,42 @@
 		<p>Each time when the game starts, the game will change the values of each crystal.</p>
 	</div>
 	</div>
-	<h2><span id="number-to-guess"></span></h2>
-  <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div class="record">
-  	
+	<div class="row">
+	<div class="col-md-2 panel-body text-center bg-warning">
+	<p>Target</p>
+	<div id="number-to-guess"></div>
+	</div>
+		<div class="col-md-2 panel-body text-center bg-success"> 
+		<p>Your Total</p>
+		<div id="score-container">
 
-  </div>
-  <div id="crystals">
-  </div>
-    <div id="crystals2">
-  </div>
-    <div id="crystals3">
-  </div>
-    <div id="crystals4">
-  </div>
-  <div class="score">
-  	<h3>Your Score is: </h3>
+	  	</div>
+	  	</div>
+	<div class="col-md-2 panel-body text-center bg-danger"> 
+		<p>Score</p>
+	<div id="record">
   	</div>
-  	<div class="score-container">
   	</div>
-
+  	<div class="col-md-6"></div>
+	</div>
+  	<div class="row">
+  	<div class="col-md-6 panel-body bg-info">
+  	  	<div class="col-md-1.5 img-responsive">
+  	  	<div id="crystals"></div>
+  		</div>
+	    <div class="col-md-1.5 img-responsive">
+	    <div id="crystals2"></div>
+	  	</div>
+	    <div class="col-md-1.5 img-responsive">
+	    <div id="crystals3"></div>
+	  	</div>
+	    <div class="col-md-1.5 img-responsive">
+	    <div id="crystals4"></div>
+	  	</div>
+ 	</div>
+ 	<div class="col-md-6"></div>
+ 	</div>
+</div>
 </html>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="assets/javascript/game.js"></script>

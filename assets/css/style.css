@@ -5,73 +5,62 @@ body {
 h1 {
 	background-color: orange;
 	color: white;
-	padding: 5px;
+	padding: 10px;
 	font-size: 36px;
-	width: 300px;
-	margin: 5px;
-	text-align: center;
+	width: 100%;
 }
 h3 {
 	background-color: #0FF7FE;
 	padding: 5px;
-	font-size: 36px;
-	float: left;
-	width: 300px;
+	font-size: 26px;
 	margin: 5px;
 }
 .Main-Text {
 	background-color: white;
-	width: 40%;
 	padding: 5px;
-	margin-left: 5px;
 }
-.record{
-	width:125px;
-	height:125px;
+#record{
+	width:100%;
+	height:75px;
 	background-color: teal;
-	float:left;
-	margin: 5px;
+	padding-left: 10px;
+	padding-top: 5px;
 }
 .crystal-image {
-	width: 100px;
-	height: 100px;
-	margin: 5px;
-
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin-right: 22px;
+	margin-left: 5px;
 }
 .crystal2-image {
-	width: 100px;
-	height: 100px;
-	margin: 5px;
+	width: 120px;
+	height: 120px;
 	float: left;
+	margin-right: 22px;
 }
 .crystal3-image {
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	float: left;
-	margin: 5px;
+	margin-right: 22px;
 }
 .crystal4-image {
-	width: 100px;
-	height: 100px;
+	width: 120px;
+	height: 120px;
 	float: left;
-	margin: 5px;
 }
 #number-to-guess{
-	width:175px;
+	width:100%;
 	height: 75px;
 	background-color: green;
-	padding-right: 100px;
-	padding-bottom: 50px;
-	margin: 5px;
-	float: left;
+	padding-top: 10px;
 	font-size: 40px;
 }
-.score-container{
-	width: 175px;
-	height: 125px;
+#score-container{
+	width: 100%;
+	height: 75px;
 	background-color: #0FF7FE;
-	float: left;
-	margin: 5px;
-	padding: 10px;
-	font-size: 20px;
+	font-size:40px;
+	padding-top: 10px;
 }
