@@ -40,7 +40,7 @@ $(document).ready(function(){
     $("#crystals2").append(imageCrystal2);
     $("#crystals3").append(imageCrystal3);
     $("#crystals4").append(imageCrystal4); 
-    
+
   function startGame() {
     counter = 0;
  
@@ -88,12 +88,14 @@ $(document).ready(function(){
       alert("You win!");
             wins++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
     else if (counter >= targetNumber) {
       alert("You lose!!");
             loses++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
   });
@@ -111,12 +113,14 @@ $(document).ready(function(){
       alert("You win!");
             wins++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
     else if (counter >= targetNumber) {
       alert("You lose!!");
             loses++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
   });
@@ -133,12 +137,14 @@ $(document).ready(function(){
       alert("You win!");
             wins++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
     else if (counter >= targetNumber) {
       alert("You lose!!");
             loses++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
   });
@@ -155,12 +161,14 @@ $(document).ready(function(){
       alert("You win!");
             wins++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
     else if (counter >= targetNumber) {
       alert("You lose!!");
             loses++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+            $("#score-container").empty();
             startGame();
     }
   });
