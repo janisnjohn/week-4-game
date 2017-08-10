@@ -42,7 +42,7 @@ $(document).ready(function(){
     $("#crystals4").append(imageCrystal4); 
 
   function startGame() {
-    counter = 0;
+
  
     // Now for the hard part. Creating multiple crystals each with their own unique number value.
     //give random number for each crystal.
@@ -61,7 +61,7 @@ $(document).ready(function(){
       console.log(numberOptions4);
 
     // Each imageCrystal will be given a data attribute called data-crystalValue.
-    // This data attribute will be set equal to the array value.
+    // This data attribute will be set equal to the random number that was generated.
     imageCrystal.attr("data-crystalvalue", numberOptions1);
     imageCrystal2.attr("data-crystalvalue2", numberOptions2);
     imageCrystal3.attr("data-crystalvalue3", numberOptions3);
@@ -89,6 +89,7 @@ $(document).ready(function(){
             wins++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
             $("#score-container").empty();
+                counter = 0;
             startGame();
     }
     else if (counter >= targetNumber) {
@@ -96,6 +97,7 @@ $(document).ready(function(){
             loses++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
             $("#score-container").empty();
+                counter = 0;
             startGame();
     }
   });
@@ -114,6 +116,7 @@ $(document).ready(function(){
             wins++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
             $("#score-container").empty();
+                counter = 0;
             startGame();
     }
     else if (counter >= targetNumber) {
@@ -121,55 +124,60 @@ $(document).ready(function(){
             loses++;
             $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
             $("#score-container").empty();
+                counter = 0;
             startGame();
     }
   });
     $(".crystal3-image").on("click", function() {
       var crystalValue3 = ($(this).attr("data-crystalvalue3"));
-    crystalValue3 = parseInt(crystalValue3);
+      crystalValue3 = parseInt(crystalValue3);
     // We then add the crystalValue to the user's "counter" which is a global variable.
     // Every click, from every crystal adds to the global counter.
-    counter += crystalValue3;
-        console.log(counter);
+      counter += crystalValue3;
+      console.log(counter);
     $("#score-container").html(counter);
     // All of the same game win-lose logic applies. So the rest remains unchanged.
     if (counter === targetNumber) {
       alert("You win!");
-            wins++;
-            $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
-            $("#score-container").empty();
-            startGame();
+        wins++;
+        $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+        $("#score-container").empty();
+        counter = 0;
+        startGame();
     }
     else if (counter >= targetNumber) {
       alert("You lose!!");
-            loses++;
-            $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
-            $("#score-container").empty();
-            startGame();
+      loses++;
+      $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+      $("#score-container").empty();
+      counter = 0;
+      startGame();
     }
   });
     $(".crystal4-image").on("click", function() {
       var crystalValue4 = ($(this).attr("data-crystalvalue4"));
-    crystalValue4 = parseInt(crystalValue4);
-    // We then add the crystalValue to the user's "counter" which is a global variable.
-    // Every click, from every crystal adds to the global counter.
-    counter += crystalValue4;
+      crystalValue4 = parseInt(crystalValue4);
+      // We then add the crystalValue to the user's "counter" which is a global variable.
+      // Every click, from every crystal adds to the global counter.
+      counter += crystalValue4;
         console.log(counter);
-    $("#score-container").html(counter);
-    // All of the same game win-lose logic applies. So the rest remains unchanged.
+      $("#score-container").html(counter);
+      // All of the same game win-lose logic applies. So the rest remains unchanged.
     if (counter === targetNumber) {
       alert("You win!");
-            wins++;
-            $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
-            $("#score-container").empty();
-            startGame();
+      wins++;
+      $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+      $("#score-container").empty();
+      counter = 0;
+      startGame();
     }
     else if (counter >= targetNumber) {
       alert("You lose!!");
-            loses++;
-            $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
-            $("#score-container").empty();
-            startGame();
+      loses++;
+      $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+      $("#score-container").empty();
+      counter = 0;
+      startGame();
     }
   });
 });
