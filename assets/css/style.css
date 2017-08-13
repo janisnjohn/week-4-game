@@ -1,4 +1,4 @@
-body {
+bbody {
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 	background: url("../images/crystalbackground.jpg");
 }
@@ -16,7 +16,7 @@ h3 {
 	margin: 5px;
 }
 .Main-Text {
-	background-color: white;
+	background-color: teal;
 	padding: 5px;
 }
 #record{

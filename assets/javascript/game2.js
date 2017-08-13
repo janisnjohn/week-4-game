@@ -76,18 +76,20 @@ $(document).ready(function(){
       wins++;
       $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
       $("#score-container").empty();
+      $("#cr1-value").empty();
       counter = 0;
       startGame();
     }
-    else if (counter >= targetNumber) {
+    else if (counter > targetNumber) {
       alert("You lose!!");
       loses++;
       $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
       $("#score-container").empty();
+      $("#cr1-value").empty();
       counter = 0;
       startGame();
     }
-  }
+  };
   startGame()
   $(".crystal-image").on("click", function() {
     // Determining the crystal's value requires us to extract the value from the data attribute.
@@ -97,49 +99,73 @@ $(document).ready(function(){
     
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
+
     // We then add the crystalValue to the user's "counter" which is a global variable.
     // Every click, from every crystal adds to the global counter.
     counter += crystalValue;
     console.log(counter);
     $("#score-container").html(counter);
-    $("#lastRecord").html("<p>Last Crystal Value  </P>" + crystalValue);
-  roundComplete()
+    // $("#cr1-value").text(crystalValue);
+    console.log(crystalValue);
+    // All of the same game win-lose logic applies. So the rest remains unchanged.
+    if (counter === targetNumber) {
+      alert("You win!");
+      wins++;
+      $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+      $("#score-container").empty();
+      $("#cr1-value").empty();
+      counter = 0;
+      startGame();
+    }
+    else if (counter > targetNumber) {
+      alert("You lose!!");
+      loses++;
+      $("#record").html("wins: " + wins + "<br><br>" +"loses: " + loses);
+      $("#score-container").empty();
+      $("#cr1-value").empty();
+      counter = 0;
+      startGame();
+    }
+
   });
 
   $(".crystal2-image").on("click", function() {
     var crystalValue2 = ($(this).attr("data-crystalvalue2"));
     crystalValue2 = parseInt(crystalValue2);
+
     // We then add the crystalValue to the user's "counter" which is a global variable.
     // Every click, from every crystal adds to the global counter.
     counter += crystalValue2;
     console.log(counter);
     $("#score-container").html(counter);
-    $("#lastRecord").html("<p>Last Crystal Value  </P>" + crystalValue2);
     // All of the same game win-lose logic applies. So the rest remains unchanged.
-  roundComplete()
+  roundComplete();
+      // $("#cr2-value").html(crystalValue2);
   });
     $(".crystal3-image").on("click", function() {
       var crystalValue3 = ($(this).attr("data-crystalvalue3"));
       crystalValue3 = parseInt(crystalValue3);
+
       // We then add the crystalValue to the user's "counter" which is a global variable.
       // Every click, from every crystal adds to the global counter.
       counter += crystalValue3;
       console.log(counter);
       $("#score-container").html(counter);
-      $("#lastRecord").html("<p>Last Crystal Value  </P>" + crystalValue3);
       // All of the same game win-lose logic applies. So the rest remains unchanged.
-  roundComplete()
+  roundComplete();
+        // $("#cr3-value").html(crystalValue3);
   });
     $(".crystal4-image").on("click", function() {
       var crystalValue4 = ($(this).attr("data-crystalvalue4"));
       crystalValue4 = parseInt(crystalValue4);
+
       // We then add the crystalValue to the user's "counter" which is a global variable.
       // Every click, from every crystal adds to the global counter.
       counter += crystalValue4;
         console.log(counter);
       $("#score-container").html(counter);
-      $("#lastRecord").html("<p>Last Crystal Value  </P>" + crystalValue4);
       // All of the same game win-lose logic applies. So the rest remains unchanged.
-    roundComplete()
+    roundComplete();
+          // $("#cr4-value").html(crystalValue4);
   });
 });
